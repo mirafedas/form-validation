@@ -1,7 +1,5 @@
 var validationForm = document.createElement('FORM');
 validationForm.name = 'login';
-//validationForm.action = 'google.com';
-validationForm.method = 'POST';
 validationForm.onsubmit = validate;
 
 var age = document.createElement('INPUT');
