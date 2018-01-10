@@ -50,7 +50,7 @@ if (!username.startsWith('user_')) {
     alert("Username must start with 'user_'");
     return;
 }
-if (date !== moment().format('DD/MM/YYYY')){
+if (date !== moment().format('DD/MM/YYYY') && moment()){
 alert('Please, input current date in this format: dd/mm/yyyy');
 return;
 }
