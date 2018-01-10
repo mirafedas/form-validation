@@ -34,25 +34,35 @@ window.onload = function() {
     document.body.appendChild(validationForm);
 };
 
+
+
+
+
+
 function validate(form) {
     var username = document.forms['login']["username"].value;
     var age = document.forms['login']["age"].value;
     var date = document.forms['login']["date"].value;
 if (age == "" || date == "" || username == "") {
     alert("Please fill in all fields");
-    return;
+    return false;
+    
 } 
 if (!Number.isInteger(age) && age < 0) {
     alert("Age can contain only numbers");
-    return;
+    return false;
+    
+    
 }
 if (!username.startsWith('user_')) {
     alert("Username must start with 'user_'");
-    return;
+    return false;
+    
 }
 if (date !== moment().format('DD/MM/YYYY') && moment()){
 alert('Please, input current date in this format: dd/mm/yyyy');
-return;
+return false;
 }
+
 alert("Validation completed successfully");
 }
