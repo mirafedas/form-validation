@@ -48,7 +48,7 @@ if (age == "" || date == "" || username == "") {
     return false;
     
 } 
-if (!Number.isInteger(age) && age < 0) {
+if (age !== /\s[0-1]{1}[0-9]{0,2}/) {
     alert("Age can contain only numbers");
     return false;
     
