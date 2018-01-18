@@ -48,12 +48,11 @@ if (age == "" || date == "" || username == "") {
     return false;
     
 } 
-if (age !== /\s[0-1]{1}[0-9]{0,2}/) {
+if (! /^[0-9]+$/.test(age)) {
     alert("Age can contain only numbers");
     return false;
+    }
     
-    
-}
 if (!username.startsWith('user_')) {
     alert("Username must start with 'user_'");
     return false;
